@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sqfliteapps/path_provider_dosya_kullanimi.dart';
 import 'package:sqfliteapps/shared_pref_kullanimi.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SharedPrefKullanimi(),
+      home: PathProviderDosyaKullanimi(),
     );
   }
 }

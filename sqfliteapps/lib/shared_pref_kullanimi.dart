@@ -125,16 +125,16 @@ class _SharedPrefKullanimiState extends State<SharedPrefKullanimi> {
     await (mySharedPreferences as SharedPreferences).setBool("mycinsiyet", cinsiyet);
   }
 
-  void _goster() {
-    debugPrint("Okunan isim: "+(mySharedPreferences as SharedPreferences).getString("myIsim") ?? "NULL");
-    debugPrint("Okunan id: "+(mySharedPreferences as SharedPreferences).getInt("myId").toString() ?? "NULL" );
-    debugPrint("Okunan cinsiyet erkek mi ? : "+(mySharedPreferences as SharedPreferences).getBool("mycinsiyet").toString() ?? "NULL");
+  void _goster() async {
+    await debugPrint("Okunan isim: "+(mySharedPreferences as SharedPreferences).getString("myIsim") ?? "NULL");
+    await debugPrint("Okunan id: "+(mySharedPreferences as SharedPreferences).getInt("myId").toString() ?? "NULL" );
+    await debugPrint("Okunan cinsiyet erkek mi ? : "+(mySharedPreferences as SharedPreferences).getBool("mycinsiyet").toString() ?? "NULL");
 
   }
 
-  void _sil() {
-    (mySharedPreferences as SharedPreferences).remove("myIsim");
-    (mySharedPreferences as SharedPreferences).remove("myId");
-    (mySharedPreferences as SharedPreferences).remove("mycinsiyet");
+  void _sil() async{
+   await (mySharedPreferences as SharedPreferences).remove("myIsim");
+   await (mySharedPreferences as SharedPreferences).remove("myId");
+   await (mySharedPreferences as SharedPreferences).remove("mycinsiyet");
   }
 }
